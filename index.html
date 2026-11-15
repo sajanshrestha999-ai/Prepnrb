@@ -1,91 +1,252 @@
-﻿<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>NRB 60-Day Study Plan</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>NRB 60-Day Study Plan</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#c8102e">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" href="icon-192.png">
 <style>
-<!-- Add these inside the <head> of your existing HTML -->
-<link rel=”manifest” href=”manifest.json”>
-<meta name=”theme-color” content=”#c8102e”>
-<meta name=”apple-mobile-web-app-capable” content=”yes”>
-<meta name=”apple-mobile-web-app-status-bar-style” content=”black-translucent”>
-<link rel=”apple-touch-icon” href=”icon-192.png”>
-
-<script>
-  if (”serviceWorker” in navigator) {
-    window.addEventListener(”load”, () => {
-      navigator.serviceWorker.register(”sw.js”);
-    });
-  }
-</script>
-:root{--bg:#f2f5fa;--card:#fff;--tx:#14213d;--mut:#5b6678;--ac:#c8102e;--nv:#1b3a8a;--ok:#1f8a4c;--wn:#d9930d;--bd:#dde3ee;--emp:#dfe5f0;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1424;--card:#172038;--tx:#eef1f8;--mut:#9aa6bd;--ac:#ff5a6e;--nv:#8fa8ff;--ok:#4cc27d;--wn:#f0b640;--bd:#27314d;--emp:#2a3555}}
-:root[data-theme="dark"]{--bg:#0e1424;--card:#172038;--tx:#eef1f8;--mut:#9aa6bd;--ac:#ff5a6e;--nv:#8fa8ff;--ok:#4cc27d;--wn:#f0b640;--bd:#27314d;--emp:#2a3555}
-html{scroll-padding-top:env(safe-area-inset-top,0px)}*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.5 "Segoe UI",Roboto,system-ui,sans-serif;max-width:560px;margin:auto;padding:14px 14px 90px}
+:root{--bg:#f2f5fa;--card:#fff;--tx:#14213d;--mut:#5b6678;--ac:#c8102e;--nv:#1b3a8a;--ok:#1f8a4c;--wn:#d9930d;--bd:#dde3ee;--emp:#dfe5f0;--on-ac:#fff;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1424;--card:#172038;--tx:#eef1f8;--mut:#9aa6bd;--ac:#ff5a6e;--nv:#8fa8ff;--ok:#4cc27d;--wn:#f0b640;--bd:#27314d;--emp:#2a3555;--on-ac:#0e1424;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0e1424;--card:#172038;--tx:#eef1f8;--mut:#9aa6bd;--ac:#ff5a6e;--nv:#8fa8ff;--ok:#4cc27d;--wn:#f0b640;--bd:#27314d;--emp:#2a3555;--on-ac:#0e1424;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0 auto;background:var(--bg);color:var(--tx);font:16px/1.5 "Segoe UI",Roboto,system-ui,sans-serif;max-width:560px;padding:14px 14px 90px}
 h1{font-size:15px;font-weight:600;color:var(--mut);margin:4px 0 10px}
 .card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px;margin:12px 0}
-.big{font-size:56px;font-weight:800;line-height:1;letter-spacing:-2px;color:var(--ac)}.big small{font-size:18px;font-weight:600;color:var(--mut);letter-spacing:0}
-.strip{display:grid;grid-template-columns:repeat(30,1fr);gap:3px;margin:12px 0 4px}.strip i{height:10px;border-radius:2px;background:var(--emp)}
+.big{font-size:56px;font-weight:800;line-height:1;letter-spacing:-2px;color:var(--ac)}
+.big small{font-size:18px;font-weight:600;color:var(--mut);letter-spacing:0}
+.strip{display:grid;grid-template-columns:repeat(30,1fr);gap:3px;margin:12px 0 4px}
+.strip i{height:10px;border-radius:2px;background:var(--emp)}
 .strip i.c{background:var(--ok)}.strip i.p{background:var(--wn)}.strip i.t{outline:2px solid var(--ac);outline-offset:1px}
-.chip{display:inline-block;background:var(--nv);color:#fff;border-radius:99px;padding:2px 12px;font-size:13px;font-weight:600}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .chip{color:#0e1424}}
+.chip{display:inline-block;background:var(--nv);color:var(--on-ac);border-radius:99px;padding:2px 12px;font-size:13px;font-weight:600}
 .min{border-left:4px solid var(--wn);padding:4px 12px;margin:12px 0;color:var(--mut);font-size:14px}
-.tick{display:flex;align-items:center;gap:12px;width:100%;padding:14px;margin:8px 0;border:2px solid var(--bd);border-radius:12px;background:var(--card);color:var(--tx);font:inherit;font-size:16px;text-align:left}
+.tick{display:flex;align-items:center;gap:12px;width:100%;padding:14px;margin:8px 0;border:2px solid var(--bd);border-radius:12px;background:var(--card);color:var(--tx);font:inherit;font-size:16px;text-align:left;cursor:pointer}
 .tick b{width:26px;height:26px;border-radius:8px;border:2px solid var(--mut);display:grid;place-items:center;flex:none;color:#fff}
 .tick.on{border-color:var(--ok)}.tick.on b{background:var(--ok);border-color:var(--ok)}
 textarea,input{width:100%;font:inherit;padding:10px;border:1px solid var(--bd);border-radius:10px;background:var(--bg);color:var(--tx)}
-.nav{display:flex;gap:8px}.nav button,.btn{flex:1;padding:12px;border-radius:10px;border:1px solid var(--bd);background:var(--card);color:var(--tx);font:inherit}
-.banner{background:var(--ac);color:#fff;border-radius:12px;padding:12px 14px;margin:8px 0;font-weight:600}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .banner{color:#0e1424}}
-.row{display:flex;align-items:center;gap:10px;padding:10px 4px;border-bottom:1px solid var(--bd);width:100%;background:none;border-left:0;border-right:0;border-top:0;color:var(--tx);font:inherit;text-align:left}
-.row .n{width:30px;font-weight:700;color:var(--nv)}.row .f{flex:1;font-size:14px}.row .f small{display:block;color:var(--mut)}
+.nav{display:flex;gap:8px}
+.nav button{flex:1;padding:12px;border-radius:10px;border:1px solid var(--bd);background:var(--card);color:var(--tx);font:inherit;cursor:pointer}
+.nav button:disabled{opacity:.4;cursor:default}
+.banner{background:var(--ac);color:var(--on-ac);border-radius:12px;padding:12px 14px;margin:8px 0;font-weight:600}
+.row{display:flex;align-items:center;gap:10px;padding:10px 4px;width:100%;background:none;border:0;border-bottom:1px solid var(--bd);color:var(--tx);font:inherit;text-align:left;cursor:pointer}
+.row .n{width:30px;font-weight:700;color:var(--nv)}
+.row .f{flex:1;font-size:14px}.row .f small{display:block;color:var(--mut)}
 .dot{width:10px;height:10px;border-radius:50%;background:var(--emp)}.dot.c{background:var(--ok)}.dot.p{background:var(--wn)}
-.stat{display:flex;justify-content:space-between;padding:6px 0}.stat b{font-size:20px}
-.bar{height:8px;background:var(--emp);border-radius:4px;overflow:hidden;flex:1}.bar span{display:block;height:100%;background:var(--ok)}
+.stat{display:flex;justify-content:space-between;align-items:center;padding:6px 0}.stat b{font-size:20px}
+.bar{height:8px;background:var(--emp);border-radius:4px;overflow:hidden;flex:1;margin:0 12px}
+.bar span{display:block;height:100%;background:var(--ok)}
 nav{position:fixed;left:0;right:0;bottom:0;display:flex;max-width:560px;margin:auto;background:var(--card);border-top:1px solid var(--bd);padding-bottom:env(safe-area-inset-bottom,0px)}
-nav button{flex:1;padding:14px 0;border:0;background:none;color:var(--mut);font:inherit;font-weight:600}nav button.on{color:var(--ac)}
-</style></head><body><h1>NRB Assistant Director (Admin): 60-day plan</h1><div id="app"></div>
-<nav><button data-v="today">Today</button><button data-v="plan">All days</button><button data-v="stats">Progress</button></nav>
+nav button{flex:1;padding:14px 0;border:0;background:none;color:var(--mut);font:inherit;font-weight:600;cursor:pointer}
+nav button.on{color:var(--ac)}
+</style>
+</head>
+<body>
+<h1>NRB Assistant Director (Admin): 60-day plan</h1>
+<div id="app"></div>
+<nav>
+  <button type="button" data-v="today">Today</button>
+  <button type="button" data-v="plan">All days</button>
+  <button type="button" data-v="stats">Progress</button>
+</nav>
 <script>
-const D=[{"d": 1, "f": "Management & HR", "t": "Management functions and evolution of management thought (scientific, administrative, bureaucratic, human relations). Setup tonight: phone charger in another room, notebook open at today’s topic.", "m": "Read the headings only, write 3 key words", "tm": "20 min"}, {"d": 2, "f": "Management & HR", "t": "Leadership: transformational vs transactional, ethical leadership, teamwork and conflict", "m": "Write one-line definition of each leadership type", "tm": "20 min"}, {"d": 3, "f": "Management & HR", "t": "Motivation theories: Maslow, Herzberg, Vroom, Adams; compensation and job redesign", "m": "Write names of 4 theories + 1 line each", "tm": "20 min"}, {"d": 4, "f": "Management & HR", "t": "HR planning, job analysis, recruitment and selection, workforce diversity", "m": "Write the HR planning steps from memory", "tm": "20 min"}, {"d": 5, "f": "Management & HR", "t": "Performance evaluation, training and development, career and succession planning", "m": "List 5 appraisal techniques", "tm": "20 min"}, {"d": 6, "f": "Management & HR", "t": "Saturday test: 20 management/HR MCQs + write ONE 10-mark answer (e.g. motivation theories)", "m": "Do 5 MCQs only", "tm": "60-90 min"}, {"d": 7, "f": "Review", "t": "Review week 1 notes. Recall without looking. Tick off what you remember.", "m": "Skim notes for 5 min", "tm": "15 min"}, {"d": 8, "f": "Banking & Finance", "t": "Nepal Rastra Bank: objectives, functions, structure; NRB Act 2058 headlines", "m": "Write 5 functions of NRB", "tm": "20 min"}, {"d": 9, "f": "Banking & Finance", "t": "Banking system of Nepal: A/B/C/D class institutions, BAFIA 2073 headlines", "m": "Write the 4 classes + 1 line each", "tm": "20 min"}, {"d": 10, "f": "Banking & Finance", "t": "Monetary policy tools: CRR, SLR, bank rate, repo, reverse repo, SLF, OMO", "m": "Write full forms of all tools", "tm": "20 min"}, {"d": 11, "f": "Banking & Finance", "t": "Interest rates: base rate, spread, interest rate corridor, deposit and lending rates", "m": "Define base rate and spread", "tm": "20 min"}, {"d": 12, "f": "Banking & Finance", "t": "Money market vs capital market: instruments, SEBON, NEPSE, T-bills, bonds", "m": "Make a 2-column table (money vs capital)", "tm": "20 min"}, {"d": 13, "f": "Banking & Finance", "t": "Saturday test: 25 banking MCQs + one short answer on monetary policy tools", "m": "Do 5 MCQs only", "tm": "60-90 min"}, {"d": 14, "f": "Review", "t": "Review week 2 notes. Recall without looking.", "m": "Skim notes for 5 min", "tm": "15 min"}, {"d": 15, "f": "Banking & Finance", "t": "Financial ratios: liquidity, profitability, leverage (formulas + meaning)", "m": "Write 4 ratio formulas", "tm": "20 min"}, {"d": 16, "f": "Banking & Finance", "t": "Capital adequacy, NPL, balance sheet basics, sources of finance", "m": "Define CAR and NPL", "tm": "20 min"}, {"d": 17, "f": "Maths & Stats", "t": "Maths: percentage, ratio and proportion (solve 8 problems)", "m": "Solve 2 problems", "tm": "20 min"}, {"d": 18, "f": "Maths & Stats", "t": "Maths: profit and loss, simple and compound interest (solve 8 problems)", "m": "Solve 2 problems", "tm": "20 min"}, {"d": 19, "f": "Banking & Finance", "t": "Deposit insurance, financial stability and macro-prudential basics", "m": "Write 3 lines on financial stability", "tm": "20 min"}, {"d": 20, "f": "Mixed test", "t": "Saturday test: 15 banking + 15 maths MCQs; log mistakes in ErrorLog", "m": "Do 5 MCQs only", "tm": "60-90 min"}, {"d": 21, "f": "Review", "t": "Review week 3 notes and ErrorLog. Recall without looking.", "m": "Skim notes for 5 min", "tm": "15 min"}, {"d": 22, "f": "Economics", "t": "Micro basics: demand, supply, elasticity of demand", "m": "Draw demand and supply curves", "tm": "20 min"}, {"d": 23, "f": "Economics", "t": "Market structures: perfect competition, monopoly, monopolistic, oligopoly", "m": "Table: 4 markets x 3 features", "tm": "20 min"}, {"d": 24, "f": "Maths & Stats", "t": "Maths: algebra, linear and quadratic equations, indices (solve 8 problems)", "m": "Solve 2 problems", "tm": "20 min"}, {"d": 25, "f": "Economics", "t": "Macro: GDP and its measurement (expenditure, income, value-added); GDP in Nepal", "m": "Write 3 GDP measurement approaches", "tm": "20 min"}, {"d": 26, "f": "Economics", "t": "Inflation, unemployment, Phillips curve basics, Nepal CPI", "m": "Define inflation + 2 causes", "tm": "20 min"}, {"d": 27, "f": "Mixed test", "t": "Saturday test: 15 economics + 15 maths MCQs; log mistakes", "m": "Do 5 MCQs only", "tm": "60-90 min"}, {"d": 28, "f": "Review", "t": "Review week 4 notes and ErrorLog.", "m": "Skim notes for 5 min", "tm": "15 min"}, {"d": 29, "f": "Economics", "t": "Nepal: balance of payments, trade structure, trade deficit", "m": "Define BoP; list 3 main imports", "tm": "20 min"}, {"d": 30, "f": "Economics", "t": "Exchange rate regime (INR peg), remittance and its role", "m": "Write 4 facts about remittance", "tm": "20 min"}, {"d": 31, "f": "Maths & Stats", "t": "Maths: sets, matrix, simple derivative basics (solve 6 problems)", "m": "Solve 2 problems", "tm": "20 min"}, {"d": 32, "f": "Economics", "t": "Fiscal policy, public debt (internal/external), foreign aid in Nepal", "m": "List 3 fiscal policy instruments", "tm": "20 min"}, {"d": 33, "f": "Economics", "t": "Periodic plans and sectoral policies: industry, tourism, hydropower, agriculture", "m": "Write names of current policies", "tm": "20 min"}, {"d": 34, "f": "Mixed test", "t": "Saturday test: 40 mixed MCQs in 40 minutes; log mistakes", "m": "Do 10 MCQs only", "tm": "60-90 min"}, {"d": 35, "f": "Review", "t": "Review week 5 notes and ErrorLog.", "m": "Skim notes for 5 min", "tm": "15 min"}, {"d": 36, "f": "Maths & Stats", "t": "Statistics: mean, median, mode (solve 8 problems)", "m": "Solve 2 problems", "tm": "20 min"}, {"d": 37, "f": "Maths & Stats", "t": "Statistics: range, variance, standard deviation (solve 6 problems)", "m": "Write the SD formula", "tm": "20 min"}, {"d": 38, "f": "Maths & Stats", "t": "Correlation and regression basics (solve 5 problems)", "m": "Solve 1 problem", "tm": "20 min"}, {"d": 39, "f": "Maths & Stats", "t": "Probability, permutation and combination (solve 8 problems)", "m": "Solve 2 problems", "tm": "20 min"}, {"d": 40, "f": "Maths & Stats", "t": "Sampling types, index numbers, geometry basics", "m": "Write 5 sampling types", "tm": "20 min"}, {"d": 41, "f": "Mixed test", "t": "Saturday test: 20 stats/maths + 20 mixed MCQs; log mistakes", "m": "Do 10 MCQs only", "tm": "60-90 min"}, {"d": 42, "f": "Review", "t": "Review week 6 notes and ErrorLog.", "m": "Skim notes for 5 min", "tm": "15 min"}, {"d": 43, "f": "IT & GK", "t": "Computer basics, operating systems, MS Office, internet and email", "m": "List 5 MS Office features", "tm": "20 min"}, {"d": 44, "f": "IT & GK", "t": "Networks (LAN/WAN/MAN), intranet/extranet, viruses, cyber security", "m": "Write 3 network types", "tm": "20 min"}, {"d": 45, "f": "IT & GK", "t": "IT in banking and risks; Electronic Transactions Act 2063; e-governance", "m": "Write 3 IT risks in banking", "tm": "20 min"}, {"d": 46, "f": "IT & GK", "t": "Constitution of Nepal: Parts 1 to 5 headlines", "m": "Write 5 key articles/themes", "tm": "20 min"}, {"d": 47, "f": "IT & GK", "t": "Current affairs: Nepal economy, politics, budget, NRB monetary policy (one news summary)", "m": "Read one headline summary", "tm": "20 min"}, {"d": 48, "f": "Mixed test", "t": "Saturday test: 50 mixed MCQs in 45 minutes; log mistakes", "m": "Do 10 MCQs only", "tm": "60-90 min"}, {"d": 49, "f": "Review", "t": "Review week 7 notes and ErrorLog.", "m": "Skim notes for 5 min", "tm": "15 min"}, {"d": 50, "f": "Banking Laws", "t": "Foreign Exchange (Regulation) Act 2019; Payment and Settlement Act 2075", "m": "Write 3 headline points each", "tm": "20 min"}, {"d": 51, "f": "Banking Laws", "t": "Asset (Money) Laundering Prevention Act 2064; Banking Offence and Punishment Act 2064", "m": "Write 3 headline points each", "tm": "20 min"}, {"d": 52, "f": "Weak area", "t": "Weak area #1: choose the topic with most mistakes in ErrorLog", "m": "Re-read 1 ErrorLog entry", "tm": "20 min"}, {"d": 53, "f": "Weak area", "t": "Weak area #2: choose the second weakest topic from ErrorLog", "m": "Re-read 1 ErrorLog entry", "tm": "20 min"}, {"d": 54, "f": "Economics", "t": "International: WTO, SAARC, BIMSTEC, IMF, World Bank basics", "m": "Write full forms + purposes", "tm": "20 min"}, {"d": 55, "f": "Full mock", "t": "Saturday: full mock, 100 MCQs in 90 minutes, negative marking (-20%) applied", "m": "Do 20 MCQs only", "tm": "60-90 min"}, {"d": 56, "f": "Review", "t": "Review mock paper. Rank your weakest 3 areas.", "m": "Skim notes for 5 min", "tm": "15 min"}, {"d": 57, "f": "Weak area", "t": "Fix mock errors: Economics", "m": "Redo 3 wrong questions", "tm": "20 min"}, {"d": 58, "f": "Weak area", "t": "Fix mock errors: Banking and Finance", "m": "Redo 3 wrong questions", "tm": "20 min"}, {"d": 59, "f": "Weak area", "t": "Fix mock errors: Maths and Statistics", "m": "Redo 3 wrong questions", "tm": "20 min"}, {"d": 60, "f": "Reflection", "t": "Day 60: review your tracker. What worked? Decide the next 60 days (Phase 2 written answers).", "m": "Write 3 lines of reflection", "tm": "20 min"}];
-let S={};try{S=JSON.parse(localStorage.getItem("nrb"))||{}}catch(e){}
-S.start=S.start||"2026-11-16";S.ticks=S.ticks||{};S.notes=S.notes||{};S.time=S.time||"06:00";
-const save=()=>{try{localStorage.setItem("nrb",JSON.stringify(S))}catch(e){}};
-const d0=()=>new Date(S.start+"T00:00:00");
-const todayN=()=>{const n=new Date();n.setHours(0,0,0,0);return Math.round((n-d0())/864e5)+1};
-const dateOf=n=>{const x=d0();x.setDate(x.getDate()+n-1);return x};
-const fmt=x=>x.toLocaleDateString("en-GB",{weekday:"long",day:"numeric",month:"long"});
-const sc=n=>(S.ticks[n]||[0,0,0]).reduce((a,b)=>a+b,0);
-const cl=n=>sc(n)==3?"c":sc(n)>0?"p":"";
-const T=()=>todayN();
-let view="today",sel=Math.min(60,Math.max(1,T()));
-function streaks(){let c=0,b=0,cur=0;const t=Math.min(60,T());for(let i=1;i<=60;i++){c=sc(i)==3?c+1:0;b=Math.max(b,c);if(i==t)cur=c;if(i==t-1&&sc(t)!=3)cur=c}return[cur,b]}
-const strip=()=>'<div class="strip">'+D.map(x=>`<i class="${cl(x.d)} ${x.d==T()?"t":""}"></i>`).join("")+"</div>";
-function today(){const x=D[sel-1],t=S.ticks[sel]||[0,0,0],n=T();
-const L=["Studied for the planned time","Phone was in another room","Recalled without notes"];
-let b="";if(n<1)b=`<div class="banner">Your plan starts in ${1-n} day${n<0?"s":""}. Day 1 is ${fmt(dateOf(1))}.</div>`;
-else if(sel==n&&sc(n)<3){const[h,m]=S.time.split(":");const now=new Date();if(now.getHours()*60+now.getMinutes()>=h*60+ +m)b='<div class="banner">It’s study time. Five minutes is enough to start.</div>'}
-return b+`<div class="card"><div class="big">Day ${sel} <small>of 60</small></div><div style="color:var(--mut)">${fmt(dateOf(sel))}</div>${strip()}
-<p><span class="chip">${x.f}</span> &nbsp;${x.tm}</p><p style="font-size:18px;margin:8px 0">${x.t}</p>
+// d = day, f = focus area, t = task, m = minimum "bad day" task, tm = time
+const D = [
+{d:1,f:"Management & HR",t:"Management functions and evolution of management thought (scientific, administrative, bureaucratic, human relations). Setup tonight: phone charger in another room, notebook open at today’s topic.",m:"Read the headings only, write 3 key words",tm:"20 min"},
+{d:2,f:"Management & HR",t:"Leadership: transformational vs transactional, ethical leadership, teamwork and conflict",m:"Write one-line definition of each leadership type",tm:"20 min"},
+{d:3,f:"Management & HR",t:"Motivation theories: Maslow, Herzberg, Vroom, Adams; compensation and job redesign",m:"Write names of 4 theories + 1 line each",tm:"20 min"},
+{d:4,f:"Management & HR",t:"HR planning, job analysis, recruitment and selection, workforce diversity",m:"Write the HR planning steps from memory",tm:"20 min"},
+{d:5,f:"Management & HR",t:"Performance evaluation, training and development, career and succession planning",m:"List 5 appraisal techniques",tm:"20 min"},
+{d:6,f:"Management & HR",t:"Saturday test: 20 management/HR MCQs + write ONE 10-mark answer (e.g. motivation theories)",m:"Do 5 MCQs only",tm:"60-90 min"},
+{d:7,f:"Review",t:"Review week 1 notes. Recall without looking. Tick off what you remember.",m:"Skim notes for 5 min",tm:"15 min"},
+{d:8,f:"Banking & Finance",t:"Nepal Rastra Bank: objectives, functions, structure; NRB Act 2058 headlines",m:"Write 5 functions of NRB",tm:"20 min"},
+{d:9,f:"Banking & Finance",t:"Banking system of Nepal: A/B/C/D class institutions, BAFIA 2073 headlines",m:"Write the 4 classes + 1 line each",tm:"20 min"},
+{d:10,f:"Banking & Finance",t:"Monetary policy tools: CRR, SLR, bank rate, repo, reverse repo, SLF, OMO",m:"Write full forms of all tools",tm:"20 min"},
+{d:11,f:"Banking & Finance",t:"Interest rates: base rate, spread, interest rate corridor, deposit and lending rates",m:"Define base rate and spread",tm:"20 min"},
+{d:12,f:"Banking & Finance",t:"Money market vs capital market: instruments, SEBON, NEPSE, T-bills, bonds",m:"Make a 2-column table (money vs capital)",tm:"20 min"},
+{d:13,f:"Banking & Finance",t:"Saturday test: 25 banking MCQs + one short answer on monetary policy tools",m:"Do 5 MCQs only",tm:"60-90 min"},
+{d:14,f:"Review",t:"Review week 2 notes. Recall without looking.",m:"Skim notes for 5 min",tm:"15 min"},
+{d:15,f:"Banking & Finance",t:"Financial ratios: liquidity, profitability, leverage (formulas + meaning)",m:"Write 4 ratio formulas",tm:"20 min"},
+{d:16,f:"Banking & Finance",t:"Capital adequacy, NPL, balance sheet basics, sources of finance",m:"Define CAR and NPL",tm:"20 min"},
+{d:17,f:"Maths & Stats",t:"Maths: percentage, ratio and proportion (solve 8 problems)",m:"Solve 2 problems",tm:"20 min"},
+{d:18,f:"Maths & Stats",t:"Maths: profit and loss, simple and compound interest (solve 8 problems)",m:"Solve 2 problems",tm:"20 min"},
+{d:19,f:"Banking & Finance",t:"Deposit insurance, financial stability and macro-prudential basics",m:"Write 3 lines on financial stability",tm:"20 min"},
+{d:20,f:"Mixed test",t:"Saturday test: 15 banking + 15 maths MCQs; log mistakes in ErrorLog",m:"Do 5 MCQs only",tm:"60-90 min"},
+{d:21,f:"Review",t:"Review week 3 notes and ErrorLog. Recall without looking.",m:"Skim notes for 5 min",tm:"15 min"},
+{d:22,f:"Economics",t:"Micro basics: demand, supply, elasticity of demand",m:"Draw demand and supply curves",tm:"20 min"},
+{d:23,f:"Economics",t:"Market structures: perfect competition, monopoly, monopolistic, oligopoly",m:"Table: 4 markets x 3 features",tm:"20 min"},
+{d:24,f:"Maths & Stats",t:"Maths: algebra, linear and quadratic equations, indices (solve 8 problems)",m:"Solve 2 problems",tm:"20 min"},
+{d:25,f:"Economics",t:"Macro: GDP and its measurement (expenditure, income, value-added); GDP in Nepal",m:"Write 3 GDP measurement approaches",tm:"20 min"},
+{d:26,f:"Economics",t:"Inflation, unemployment, Phillips curve basics, Nepal CPI",m:"Define inflation + 2 causes",tm:"20 min"},
+{d:27,f:"Mixed test",t:"Saturday test: 15 economics + 15 maths MCQs; log mistakes",m:"Do 5 MCQs only",tm:"60-90 min"},
+{d:28,f:"Review",t:"Review week 4 notes and ErrorLog.",m:"Skim notes for 5 min",tm:"15 min"},
+{d:29,f:"Economics",t:"Nepal: balance of payments, trade structure, trade deficit",m:"Define BoP; list 3 main imports",tm:"20 min"},
+{d:30,f:"Economics",t:"Exchange rate regime (INR peg), remittance and its role",m:"Write 4 facts about remittance",tm:"20 min"},
+{d:31,f:"Maths & Stats",t:"Maths: sets, matrix, simple derivative basics (solve 6 problems)",m:"Solve 2 problems",tm:"20 min"},
+{d:32,f:"Economics",t:"Fiscal policy, public debt (internal/external), foreign aid in Nepal",m:"List 3 fiscal policy instruments",tm:"20 min"},
+{d:33,f:"Economics",t:"Periodic plans and sectoral policies: industry, tourism, hydropower, agriculture",m:"Write names of current policies",tm:"20 min"},
+{d:34,f:"Mixed test",t:"Saturday test: 40 mixed MCQs in 40 minutes; log mistakes",m:"Do 10 MCQs only",tm:"60-90 min"},
+{d:35,f:"Review",t:"Review week 5 notes and ErrorLog.",m:"Skim notes for 5 min",tm:"15 min"},
+{d:36,f:"Maths & Stats",t:"Statistics: mean, median, mode (solve 8 problems)",m:"Solve 2 problems",tm:"20 min"},
+{d:37,f:"Maths & Stats",t:"Statistics: range, variance, standard deviation (solve 6 problems)",m:"Write the SD formula",tm:"20 min"},
+{d:38,f:"Maths & Stats",t:"Correlation and regression basics (solve 5 problems)",m:"Solve 1 problem",tm:"20 min"},
+{d:39,f:"Maths & Stats",t:"Probability, permutation and combination (solve 8 problems)",m:"Solve 2 problems",tm:"20 min"},
+{d:40,f:"Maths & Stats",t:"Sampling types, index numbers, geometry basics",m:"Write 5 sampling types",tm:"20 min"},
+{d:41,f:"Mixed test",t:"Saturday test: 20 stats/maths + 20 mixed MCQs; log mistakes",m:"Do 10 MCQs only",tm:"60-90 min"},
+{d:42,f:"Review",t:"Review week 6 notes and ErrorLog.",m:"Skim notes for 5 min",tm:"15 min"},
+{d:43,f:"IT & GK",t:"Computer basics, operating systems, MS Office, internet and email",m:"List 5 MS Office features",tm:"20 min"},
+{d:44,f:"IT & GK",t:"Networks (LAN/WAN/MAN), intranet/extranet, viruses, cyber security",m:"Write 3 network types",tm:"20 min"},
+{d:45,f:"IT & GK",t:"IT in banking and risks; Electronic Transactions Act 2063; e-governance",m:"Write 3 IT risks in banking",tm:"20 min"},
+{d:46,f:"IT & GK",t:"Constitution of Nepal: Parts 1 to 5 headlines",m:"Write 5 key articles/themes",tm:"20 min"},
+{d:47,f:"IT & GK",t:"Current affairs: Nepal economy, politics, budget, NRB monetary policy (one news summary)",m:"Read one headline summary",tm:"20 min"},
+{d:48,f:"Mixed test",t:"Saturday test: 50 mixed MCQs in 45 minutes; log mistakes",m:"Do 10 MCQs only",tm:"60-90 min"},
+{d:49,f:"Review",t:"Review week 7 notes and ErrorLog.",m:"Skim notes for 5 min",tm:"15 min"},
+{d:50,f:"Banking Laws",t:"Foreign Exchange (Regulation) Act 2019; Payment and Settlement Act 2075",m:"Write 3 headline points each",tm:"20 min"},
+{d:51,f:"Banking Laws",t:"Asset (Money) Laundering Prevention Act 2064; Banking Offence and Punishment Act 2064",m:"Write 3 headline points each",tm:"20 min"},
+{d:52,f:"Weak area",t:"Weak area #1: choose the topic with most mistakes in ErrorLog",m:"Re-read 1 ErrorLog entry",tm:"20 min"},
+{d:53,f:"Weak area",t:"Weak area #2: choose the second weakest topic from ErrorLog",m:"Re-read 1 ErrorLog entry",tm:"20 min"},
+{d:54,f:"Economics",t:"International: WTO, SAARC, BIMSTEC, IMF, World Bank basics",m:"Write full forms + purposes",tm:"20 min"},
+{d:55,f:"Full mock",t:"Saturday: full mock, 100 MCQs in 90 minutes, negative marking (-20%) applied",m:"Do 20 MCQs only",tm:"60-90 min"},
+{d:56,f:"Review",t:"Review mock paper. Rank your weakest 3 areas.",m:"Skim notes for 5 min",tm:"15 min"},
+{d:57,f:"Weak area",t:"Fix mock errors: Economics",m:"Redo 3 wrong questions",tm:"20 min"},
+{d:58,f:"Weak area",t:"Fix mock errors: Banking and Finance",m:"Redo 3 wrong questions",tm:"20 min"},
+{d:59,f:"Weak area",t:"Fix mock errors: Maths and Statistics",m:"Redo 3 wrong questions",tm:"20 min"},
+{d:60,f:"Reflection",t:"Day 60: review your tracker. What worked? Decide the next 60 days (Phase 2 written answers).",m:"Write 3 lines of reflection",tm:"20 min"}
+];
+
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+
+// ---- State ----
+let S = {};
+try { S = JSON.parse(localStorage.getItem("nrb")) || {}; } catch (e) {}
+S.start = S.start || "2026-11-16";
+S.ticks = S.ticks || {};
+S.notes = S.notes || {};
+S.time  = S.time  || "06:00";
+const save = () => { try { localStorage.setItem("nrb", JSON.stringify(S)); } catch (e) {} };
+
+// ---- Date helpers ----
+const d0 = () => new Date(S.start + "T00:00:00");
+const T = () => { const n = new Date(); n.setHours(0,0,0,0); return Math.round((n - d0()) / 864e5) + 1; };
+const dateOf = n => { const x = d0(); x.setDate(x.getDate() + n - 1); return x; };
+const fmt = x => x.toLocaleDateString("en-GB", {weekday:"long", day:"numeric", month:"long"});
+const clampDay = n => Math.min(60, Math.max(1, n));
+
+// ---- Progress helpers ----
+const sc = n => (S.ticks[n] || [0,0,0]).reduce((a,b) => a + b, 0);
+const cl = n => sc(n) == 3 ? "c" : sc(n) > 0 ? "p" : "";
+
+function streaks() {
+  let run = 0, best = 0, cur = 0;
+  const t = Math.min(60, T());
+  for (let i = 1; i <= 60; i++) {
+    run = sc(i) == 3 ? run + 1 : 0;
+    best = Math.max(best, run);
+    if (i == t) cur = run;
+    if (i == t - 1 && sc(t) != 3) cur = run;
+  }
+  return [cur, best];
+}
+
+const strip = () => '<div class="strip">' +
+  D.map(x => `<i class="${cl(x.d)} ${x.d == T() ? "t" : ""}"></i>`).join("") + "</div>";
+
+// ---- Views ----
+let view = "today", sel = clampDay(T());
+
+function today() {
+  const x = D[sel - 1], t = S.ticks[sel] || [0,0,0], n = T();
+  const L = ["Studied for the planned time", "Phone was in another room", "Recalled without notes"];
+  let b = "";
+  if (n < 1) {
+    b = `<div class="banner">Your plan starts in ${1 - n} day${1 - n > 1 ? "s" : ""}. Day 1 is ${fmt(dateOf(1))}.</div>`;
+  } else if (sel == n && sc(n) < 3) {
+    const [h, m] = S.time.split(":").map(Number), now = new Date();
+    if (now.getHours() * 60 + now.getMinutes() >= h * 60 + m)
+      b = '<div class="banner">It’s study time. Five minutes is enough to start.</div>';
+  }
+  return b + `<div class="card"><div class="big">Day ${sel} <small>of 60</small></div>
+<div style="color:var(--mut)">${fmt(dateOf(sel))}</div>${strip()}
+<p><span class="chip">${x.f}</span> &nbsp;${x.tm}</p>
+<p style="font-size:18px;margin:8px 0">${x.t}</p>
 <div class="min"><b>Bad day?</b> Do this instead: ${x.m}</div>
-${L.map((l,i)=>`<button class="tick ${t[i]?"on":""}" data-t="${i}"><b>${t[i]?"✓":""}</b>${l}</button>`).join("")}
-<p style="margin:12px 0 4px;color:var(--mut)">Score ${sc(sel)}/3 ${sc(sel)==3?"· Complete":""}</p>
-<textarea id="nt" rows="2" placeholder="Notes for this day">${S.notes[sel]||""}</textarea></div>
-<div class="nav"><button data-g="-1" ${sel<2?"disabled":""}>Previous day</button><button data-g="0">Go to today</button><button data-g="1" ${sel>59?"disabled":""}>Next day</button></div>`}
-function plan(){return'<div class="card">'+D.map(x=>`<button class="row" data-o="${x.d}"><span class="n">${x.d}</span><span class="f">${x.f}<small>${dateOf(x.d).toLocaleDateString("en-GB",{weekday:"short",day:"numeric",month:"short"})}</small></span><span class="dot ${cl(x.d)}"></span></button>`).join("")+"</div>"}
-function stats(){const full=D.filter(x=>sc(x.d)==3).length,any=D.filter(x=>sc(x.d)>0).length,[cur,best]=streaks(),el=Math.min(60,Math.max(0,T()));
-let w="";for(let k=1;k<=9;k++){const ds=D.filter(x=>Math.ceil(x.d/7)==k),c=ds.filter(x=>sc(x.d)==3).length;w+=`<div class="stat"><span>Week ${k}</span><div class="bar" style="margin:0 12px"><span style="width:${c/ds.length*100}%"></span></div><span>${c}/${ds.length}</span></div>`}
-return`<div class="card">${strip()}<div class="stat"><span>Days fully completed</span><b>${full}</b></div><div class="stat"><span>Days with at least one tick</span><b>${any}</b></div>
-<div class="stat"><span>Current streak</span><b>${cur}</b></div><div class="stat"><span>Best streak</span><b>${best}</b></div>
-<div class="stat"><span>Completion so far</span><b>${el?Math.round(any/el*100):0}%</b></div></div><div class="card">${w}</div>
-<div class="card"><label>Start date<input type="date" id="sd" value="${S.start}"></label><label style="display:block;margin-top:10px">Reminder time shown in this app<input type="time" id="rt" value="${S.time}"></label>
-<p style="color:var(--mut);font-size:14px">Phone alarms come from the calendar file. This time only controls the banner on the Today screen.</p></div>`}
-function render(){document.querySelectorAll("nav button").forEach(b=>b.classList.toggle("on",b.dataset.v==view));
-$("#app").innerHTML=view=="today"?today():view=="plan"?plan():stats();
-document.querySelectorAll("[data-t]").forEach(b=>b.onclick=()=>{const t=S.ticks[sel]||[0,0,0];t[b.dataset.t]=t[b.dataset.t]?0:1;S.ticks[sel]=t;save();render()});
-document.querySelectorAll("[data-g]").forEach(b=>b.onclick=()=>{sel=b.dataset.g==0?Math.min(60,Math.max(1,T())):sel+ +b.dataset.g;render()});
-document.querySelectorAll("[data-o]").forEach(b=>b.onclick=()=>{sel=+b.dataset.o;view="today";render();scrollTo(0,0)});
-const nt=$("#nt");if(nt)nt.onchange=()=>{S.notes[sel]=nt.value;save()};
-const sd=$("#sd");if(sd)sd.onchange=()=>{if(sd.value){S.start=sd.value;save();sel=Math.min(60,Math.max(1,T()));render()}};
-const rt=$("#rt");if(rt)rt.onchange=()=>{if(rt.value){S.time=rt.value;save()}}}
-function $(s){return document.querySelector(s)}
-document.querySelectorAll("nav button").forEach(b=>b.onclick=()=>{view=b.dataset.v;render();scrollTo(0,0)});
+${L.map((l, i) => `<button type="button" class="tick ${t[i] ? "on" : ""}" data-t="${i}"><b>${t[i] ? "✓" : ""}</b>${l}</button>`).join("")}
+<p style="margin:12px 0 4px;color:var(--mut)">Score ${sc(sel)}/3 ${sc(sel) == 3 ? "· Complete" : ""}</p>
+<textarea id="nt" rows="2" placeholder="Notes for this day" aria-label="Notes for this day">${esc(S.notes[sel] || "")}</textarea></div>
+<div class="nav">
+<button type="button" data-g="-1" ${sel < 2 ? "disabled" : ""}>Previous day</button>
+<button type="button" data-g="0">Go to today</button>
+<button type="button" data-g="1" ${sel > 59 ? "disabled" : ""}>Next day</button></div>`;
+}
+
+function plan() {
+  return '<div class="card">' + D.map(x =>
+    `<button type="button" class="row" data-o="${x.d}"><span class="n">${x.d}</span><span class="f">${x.f}<small>${dateOf(x.d).toLocaleDateString("en-GB", {weekday:"short", day:"numeric", month:"short"})}</small></span><span class="dot ${cl(x.d)}"></span></button>`
+  ).join("") + "</div>";
+}
+
+function stats() {
+  const full = D.filter(x => sc(x.d) == 3).length;
+  const any  = D.filter(x => sc(x.d) > 0).length;
+  const [cur, best] = streaks();
+  const el = Math.min(60, Math.max(0, T()));
+  let w = "";
+  for (let k = 1; k <= 9; k++) {
+    const ds = D.filter(x => Math.ceil(x.d / 7) == k), c = ds.filter(x => sc(x.d) == 3).length;
+    w += `<div class="stat"><span>Week ${k}</span><div class="bar"><span style="width:${c / ds.length * 100}%"></span></div><span>${c}/${ds.length}</span></div>`;
+  }
+  return `<div class="card">${strip()}
+<div class="stat"><span>Days fully completed</span><b>${full}</b></div>
+<div class="stat"><span>Days with at least one tick</span><b>${any}</b></div>
+<div class="stat"><span>Current streak</span><b>${cur}</b></div>
+<div class="stat"><span>Best streak</span><b>${best}</b></div>
+<div class="stat"><span>Completion so far</span><b>${el ? Math.round(any / el * 100) : 0}%</b></div></div>
+<div class="card">${w}</div>
+<div class="card"><label>Start date<input type="date" id="sd" value="${S.start}"></label>
+<label style="display:block;margin-top:10px">Reminder time shown in this app<input type="time" id="rt" value="${S.time}"></label>
+<p style="color:var(--mut);font-size:14px">This time only controls the banner on the Today screen.</p></div>`;
+}
+
+function render() {
+  document.querySelectorAll("nav button").forEach(b => b.classList.toggle("on", b.dataset.v == view));
+  $("#app").innerHTML = view == "today" ? today() : view == "plan" ? plan() : stats();
+
+  document.querySelectorAll("[data-t]").forEach(b => b.onclick = () => {
+    const t = S.ticks[sel] || [0,0,0], i = +b.dataset.t;
+    t[i] = t[i] ? 0 : 1; S.ticks[sel] = t; save(); render();
+  });
+  document.querySelectorAll("[data-g]").forEach(b => b.onclick = () => {
+    sel = +b.dataset.g === 0 ? clampDay(T()) : clampDay(sel + +b.dataset.g);
+    render();
+  });
+  document.querySelectorAll("[data-o]").forEach(b => b.onclick = () => {
+    sel = +b.dataset.o; view = "today"; render(); scrollTo(0, 0);
+  });
+
+  const nt = $("#nt"); if (nt) nt.onchange = () => { S.notes[sel] = nt.value; save(); };
+  const sd = $("#sd"); if (sd) sd.onchange = () => {
+    if (sd.value) { S.start = sd.value; save(); sel = clampDay(T()); render(); }
+  };
+  const rt = $("#rt"); if (rt) rt.onchange = () => { if (rt.value) { S.time = rt.value; save(); } };
+}
+
+document.querySelectorAll("nav button").forEach(b => b.onclick = () => {
+  view = b.dataset.v; render(); scrollTo(0, 0);
+});
 render();
-</script></body></html>
+
+// ---- PWA: only on http(s) ----
+if ("serviceWorker" in navigator && /^https?:$/.test(location.protocol)) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("sw.js").catch(() => {});
+  });
+}
+</script>
+</body>
+</html>
