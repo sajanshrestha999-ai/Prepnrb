@@ -1,38 +1,13 @@
-﻿{
-  “name”: “NRB Study Plan”,
-  “short_name”: “NRB Plan”,
-  “description”: “60-Day Study Plan”,
-  “start_url”: “./index.html”,
-  “display”: “standalone”,
-  “background_color”: “#0e1424”,
-  “theme_color”: “#c8102e”,
-  “icons”: [
-    {
-      “src”: “icon-192.png”,
-      “sizes”: “192x192”,
-      “type”: “image/png”,
-      “purpose”: “any maskable”
-    },
-    {
-      “src”: “icon-512.png”,
-      “sizes”: “512x512”,
-      “type”: “image/png”,
-      “purpose”: “any maskable”
-    }
+{
+  "name": "NRB 60-Day Study Plan",
+  "short_name": "NRB Plan",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f2f5fa",
+  "theme_color": "#c8102e",
+  "icons": [
+    {"src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable"},
+    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"}
   ]
 }
-“shortcuts”: [
-  {
-    “name”: “Today’s Tasks”,
-    “short_name”: “Today”,
-    “url”: “./NRB 60-Day Study Plan (1).html?view=today”,
-    “icons”: [{ “src”: “icon-192.png”, “sizes”: “192x192” }]
-  },
-  {
-    “name”: “View Progress”,
-    “short_name”: “Progress”,
-    “url”: “./NRB 60-Day Study Plan (1).html?view=stats”,
-    “icons”: [{ “src”: “icon-192.png”, “sizes”: “192x192” }]
-  }
-]
-
